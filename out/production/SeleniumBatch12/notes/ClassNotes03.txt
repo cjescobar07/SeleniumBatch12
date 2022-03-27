@@ -1,0 +1,70 @@
+Selenium Class 3
+
+Why do we need Xpath and Css Selector?
+-- developers will not provide all the locators in html
+-- by using xpath and css, we can identify elements with any given attributes
+
+What is an Xpath?
+-- xpath is like a query language which helps us to identify elements
+uniquely on the webpage
+
+Types of Xpath:
+Absolute Xpath --> starts from the starting node in html which is "html" itself
+                    it always starts with single slash  (/)
+                    e.g. /html/body/div/div/div
+                    this way is not preferred
+Relative Xpath:
+Relative Xpath --> starts from any node in the html
+                    it always starts with double slash (//)
+
+Syntax for relative xpath:
+//tagname[@attribute = 'attribute value']
+Example: //input[@id = 'email']
+-------------------------------------------------------------------
+Identifying elements by its text:
+//tagname[text() = 'text value']
+Example: //a[text() = 'Create new account']
+Example: //h2[text() = 'Connect with friends and the world around you on Facebook.']
+-------------------------------------------------------------------
+Identifying elements by using contains method
+//tagname[contains(@attribute, 'partial attribute value')]
+Example: //input[contains(@placeholder, 'Email')]
+-------------------------------------------------------------------
+Starts-with will identify the element with partial starting value
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+Example: //button[starts-with(@data-testid, 'royal')]
+
+ends-with was used xpath 1.0 version, now we are using 2.0 and this method is not available
+
+<div> -- division
+<img> -- image
+<h> -- header
+<p> -- paragraph
+<li> -- list
+<ul> -- unordered list
+<ol> -- ordered list
+<br> -- break level
+
+
+Advanced Xpath
+is based on parent and child, sibling relationship
+
+Identifying elements by following siblings
+//tagname[@attribute = 'attribute value']/following-sibling::tagname
+Example: //input[@id = 'calFromDate']/following-sibling::img
+-------------------------------------------------------------------
+Identifying elements by preceding siblings
+//tagname[@attribute = 'attribute value']/preceding-sibling::tagname
+Example: //span[text() = '& Orders']/preceding-sibling::span
+Example: //input[@id = 'calFromDate']/preceding-sibling::label
+-------------------------------------------------------------------
+Identifying elements by parents
+//tagname[@attribute = 'attribute value']/parent::parentTagname
+Example: //span[text() = '& Orders']/parent::a
+-------------------------------------------------------------------
+Identifying elements by ancestors
+//tagname[@attribute = 'attribute value']/ancestor::ancestorTagname
+Example: //input[@id = 'email']/ancestor::form
+-------------------------------------------------------------------
+Identifying element by index
+(//img[@class= 'ui-datapicker-trigger'])[2]

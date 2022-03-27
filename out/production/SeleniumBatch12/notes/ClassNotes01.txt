@@ -1,0 +1,90 @@
+Selenium Class1
+
+What is software testing?
+Identifying the correctness and quality of an application
+
+How many ways can we test?
+manual
+automation
+
+when do we go for automation?
+after manual testing is passed
+when environment is stable
+analyze our test suite and choose our automation toll
+
+What automation toll do we know about?
+Selenium, TestNG, Cucumber, Katalon Studio, UFT/QTP
+
+Level of testing?
+Unit testing ->perform by devs
+Integration
+Acceptance Testing -> perform by clients
+System testing
+
+Types of testing?
+Functional
+Non-Functional testing
+    Performance Testing: behavior/response time/ system stability
+    Security Testing: hackable/ finds vulnerability of the software
+
+What is Selenium?
+automation testing tool, a set of tool that helps us automate web applications mainly
+used to perform functional testing
+
+Selenium Components:
+Selenium IDE (Integrated Development Environment)
+Selenium Grid--> Firefox plugin
+Selenium Webdriver
+Selenium RC ->Remote control
+
+What is Selenium Webdriver?
+Open source automation tool which allows us to perform actions on web applications
+Webdriver is an Interface
+
+Advantages of Selenium WebDriver:
+Open source
+Works with different browsers and supports cross browser testing'
+Works with different programming languages --> Java, JavaScript, Ruby, Python
+Operating system independent --> Windows, iOS, Linux
+
+Disadvantages of Selenium WebDriver:
+Cannot test desktop applications
+No technical support
+No built-in reports
+Cannot test captchas, images, or videos
+
+get() vs navigate()
+navigate can go back, forward, and refresh the page
+get() will wait for the page to fully load, whereas, navigate() will not
+get() will not keep the history of the browser, whereas, navigate() will
+
+close() vs quit()
+close() will close the current tab
+quit() will close the whole browser
+
+fullscreen() vs maximize()
+maximize() will maximize the browser and will still be able to see the control panel(back, forward, bookmarks, etc)
+fullscreen() will maximize the whole application
+
+
+
+========================================================================================================================
+package com.syntax;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchBrowser {
+
+    public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+
+        WebDriver driver = new ChromeDriver(); // Launch the browser
+        driver.get("https://www.google.com/");
+        String url = driver.getCurrentUrl();
+        System.out.println(url);
+        String title = driver.getTitle();
+        System.out.println(title);
+        driver.quit();
+    }
+}
