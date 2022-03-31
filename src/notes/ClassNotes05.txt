@@ -13,7 +13,7 @@ Types of dropdown:
 
 Handling dropdowns:
 1. Click on dropdown and click on the option
-2. using Select class
+2. using Select tag
                  in order to use Select class
                  we need to make sure out dropdown
                  has "select" tag
