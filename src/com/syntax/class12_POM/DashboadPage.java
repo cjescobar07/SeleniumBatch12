@@ -1,8 +1,7 @@
-package com.syntax.Class12_POM;
+package com.syntax.class12_POM;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class DashboadPage extends CommonMethods{
     @FindBy(id = "welcome")

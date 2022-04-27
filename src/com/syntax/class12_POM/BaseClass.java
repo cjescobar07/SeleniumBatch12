@@ -1,4 +1,4 @@
-package com.syntax.Class12_POM;
+package com.syntax.class12_POM;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
